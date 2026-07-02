@@ -1,0 +1,56 @@
+.formularioContainer{
+    padding: 20px;
+}
+
+.btnVolver{
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.formularioCnc{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.campoGrupo{
+    display: flex;
+    flex-direction: column;
+}
+
+.campoGrupo label{
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputCnc{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background-color: #222;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.btnGuardar{
+    padding: 12px;
+    background-color: #ff6b35;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btnGuardar:hover{
+    background-color: #e55a2b;
+}
