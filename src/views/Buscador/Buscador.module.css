@@ -1,0 +1,40 @@
+.buscadorContainer{
+    padding: 15px;
+}
+
+.titulo {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.listaPiezas {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjetaPieza {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #444;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjetaPieza:hover{
+    border-color: #ff6b35;
+    transform: translateY(-2px);
+}
+
+.tarjetaPieza h3 {
+    margin:  0 0 5px 0;
+    color: #ff6b35;
+}
+
+.tarjetaPieza p {
+    margin: 0;
+    color: #ccc;
+    font-size: 14px;
+}

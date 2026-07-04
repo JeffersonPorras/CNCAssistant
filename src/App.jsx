@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Buscador from './views/Buscador'
-import DetallePieza from './views/DetallePieza'
-import Formulario from './views/Formulario'
+import Buscador from './views/Buscador/Buscador'
+import DetallePieza from './views/DetallePieza/DetallePieza'
+import Formulario from './views/Formulario/Formulario'
 
 function App() {
   
