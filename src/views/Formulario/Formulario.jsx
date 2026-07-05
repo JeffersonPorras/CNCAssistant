@@ -36,7 +36,7 @@ function Fomrulario({alGuardar, alVolver}) {
             return;
         }
 
-        const formatoMedidas = '';
+        let formatoMedidas = "";
 
         if (tipoPieza === 'disco') {
             formatoMedidas =  `Tipo: DISCO | Ø Ext.Total: ${diametroExt} mm | AlturaEXt: ${alturaExt} mm
