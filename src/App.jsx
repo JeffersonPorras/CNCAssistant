@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import Buscador from './views/Buscador/Buscador'
-import DetallePieza from './views/DetallePieza/DetallePieza'
-import Formulario from './views/Formulario/Formulario'
+import Buscador from './views/Buscador/Buscador.jsx'
+import DetallePieza from './views/DetallePieza/DetallePieza.jsx'
+import Formulario from './views/Formulario/Formulario.jsx'
 
 function App() {
   
@@ -24,6 +24,14 @@ function App() {
   const guardarNuevaPieza = (nuevaPieza) =>{
     setListaPiezas([...listaPiezas, nuevaPieza]);
     setPantallaActual('buscar');
+  };
+
+  const eliminarPieza = (idEliminar) =>{
+    if (window.confirm("Seguro que quieres Borrar este Programa.")) {
+      const listaActualizada = listaPiezas.filter(pieza => pieza.id !== idEliminar);
+      setListaPiezas(listaActualizada);
+      setPantallaActual('buscar');
+    }
   };
 
   return(
@@ -50,8 +58,9 @@ function App() {
 
       {pantallaActual === 'detalle' &&(
         <DetallePieza
-          piezas = {piezaSeleccionada}
+          pieza = {piezaSeleccionada}
           alVolver = {() =>setPantallaActual('buscar')}
+          alEliminar = {eliminarPieza}
           />
       )}
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Formulario.module.css';
 
-function Fomrulario({alGuardar, alVolver}) {
+function Formulario({alGuardar, alVolver}) {
     // Estado para saber si es Disco o Cmapana
     const [tipoPieza, setTipoPieza] = useState('disco');
 
@@ -39,11 +39,21 @@ function Fomrulario({alGuardar, alVolver}) {
         let formatoMedidas = "";
 
         if (tipoPieza === 'disco') {
-            formatoMedidas =  `Tipo: DISCO | Ø Ext.Total: ${diametroExt} mm | AlturaEXt: ${alturaExt} mm
-            | alturaInt: ${alturaInt} | AreaFrenado: ${areaFrenado}`
+            formatoMedidas =  `
+            Tipo: DISCO 
+            • Ø Ext.Total: ${diametroTotal} mm 
+            • AlturaExt: ${alturaExt} mm 
+            • alturaInt: ${alturaInt} 
+            • AreaFrenado: ${areaFrenado}`;
         } else{
-            formatoMedidas =  `Tipo: Campana | Ø Altura Banda: ${AlturaBanda} mm | Diametro Banda: ${diametroBanda} mm
-            | altura Caja: ${AlturaCaja} | Espesor Plato: ${espesorPlato} | Ø Int Caja ${diametroIntCaja} | Ø Ext Caja: ${diametroExtCaja}`
+            formatoMedidas =  `
+            Tipo: Campana 
+            • Ø Altura Banda: ${AlturaBanda} mm 
+            • Diametro Banda: ${diametroBanda} mm
+            • altura Caja: ${AlturaCaja} 
+            • Espesor Plato: ${espesorPlato} 
+            • Ø Int Caja ${diametroIntCaja} 
+            • Ø Ext Caja: ${diametroExtCaja}`;
         }
 
 
@@ -266,4 +276,4 @@ function Fomrulario({alGuardar, alVolver}) {
     );
 }
 
-export default Fomrulario;
+export default Formulario;
